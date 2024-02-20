@@ -37,3 +37,22 @@ def printnumbers(x:int,y:int,z:int):
     if x < y and x!=z:
         print(x)
     printnumbers(x+1,y,z)
+
+
+# Question 5 --> # Create a new list that hold the element in a and makes him appear each element in b number of times
+def listproduct(a:list,b:list):
+    _newsize = 0
+    for i in range(len(b)):
+        _newsize += b[i] # finding the new size of for _newlist
+    print(_newsize) # check for the new size
+
+    _newlist = [] # create a new list
+    for i in range(_newsize): #iterating on _newlist from 0 to the size of _newlist
+        if i == len(b): # a condition to stop the loop when we finish the creation
+            break
+        for j in range(0, b[i]): # iterating on b list
+            _newlist.append(a[i]) # adding to the end of _newlist each element in a b[j] amount of times
+
+    print(_newlist) # printing the new list
+
+    return _newlist
