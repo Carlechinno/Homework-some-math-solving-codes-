@@ -1,0 +1,22 @@
+Question 7- Theoritcal Questions:
+
+Question 1:
+1.statements are instructions that preform actions while expressions are a combinations of values and operators that evalulate to a single values
+three examples for expressions:
+a. Boolean expressions
+b. Arithmectic expressions
+c.String expressions
+
+
+Question 2:
+the environment model is used in defining the process of a code, it manages the enviroment that the code runs. Its main role is to create a runtime environment for the code
+every programming language has an enviroment model but the implementation is different from each language
+
+
+Question 3:
+The lexicographic model is a way to organize and describe information in a systematic manner, it is basically 
+a record of information, its significance is that it assits in organizing information for the lexicon or dictionary. each word/term is given a certain 
+structure with a definition, translation, pronunciation, etc. the model enables the users to find information
+quickly by organizing the data in a systematic way
+
+

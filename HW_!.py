@@ -30,17 +30,46 @@ def factor_sum(x:int):
     return sum
 
 
+def only_positive(f):
+    def in_func(x):
+        # check if the value is positive
+        if x > 0:
+            # Activate the function on the value
+            return f(x)
+        else:
+            return None  # returns nothing if the value isnt positive
+    return in_func
+
+
+# Question 3 --> Intercept Point between to linear functions
+def interceptPoint(_func1, _func2):
+    # Define the linear function as a definition
+    a1, b1 = _func1
+    a2, b2 = _func2
+
+    # Check to see if the functions are parallel if they are then there will be no intercept point
+    if a1 == a2:
+        return None
+
+    # The calculation of the intercept point
+
+    x = (b2 - b1) / (a1 - a2)
+    y = a1 * x + b1
+
+    return x, y
+
+
 # Question 4 --> A recursive function to return all the numbers between a and b excluding a 3rd number c
-def printnumbers(x:int,y:int,z:int):
+def print_numbers(x: int, y: int, z: int):
     if x == y:
         return print(y)
-    if x < y and x!=z:
+    if x < y and x != z:
         print(x)
-    printnumbers(x+1,y,z)
+    print_numbers(x+1, y, z)
 
 
 # Question 5 --> # Create a new list that hold the element in a and makes him appear each element in b number of times
-def listproduct(a:list,b:list):
+def list_product(a:list,b:list):
     _newsize = 0
     for i in range(len(b)):
         _newsize += b[i] # finding the new size of for _newlist
@@ -56,3 +85,18 @@ def listproduct(a:list,b:list):
     print(_newlist) # printing the new list
 
     return _newlist
+
+
+# Question 6 -->function that receive a string of grades seperated by comas and returns the amount of excellent_students
+def analyze(scores_str):
+    # Separating the string to a list of grades
+    _scores = [float(score) for score in scores_str.split(',')]
+
+    # count the amount of students with an average above 85
+    excellent_students = sum(score >= 85 for score in _scores)
+
+    return excellent_students
+
+
+
+
